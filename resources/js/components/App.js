@@ -5,8 +5,18 @@ const App = () => {
     return (
         <div>
             <p>You clicked {count} times</p>
-            <button onClick={() => setCount(count + 1)}>+</button>
-            <button onClick={() => setCount(count - 1)}>-</button>
+            <button
+                onClick={() => setCount(count + 1)}
+                className="btn btn-primary"
+            >
+                +
+            </button>
+            <button
+                onClick={() => setCount(count - 1)}
+                className="btn btn-danger"
+            >
+                -
+            </button>
         </div>
     );
 };
