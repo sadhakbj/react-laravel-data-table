@@ -1,22 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
+import DataTable from "./DataTable";
 
 const App = () => {
-    const [count, setCount] = useState(1);
     return (
-        <div>
-            <p>You clicked {count} times</p>
-            <button
-                onClick={() => setCount(count + 1)}
-                className="btn btn-primary"
-            >
-                +
-            </button>
-            <button
-                onClick={() => setCount(count - 1)}
-                className="btn btn-danger"
-            >
-                -
-            </button>
+        <div className="card">
+            <div className="card-header">Users</div>
+            <div className="card-body">
+                <DataTable
+                    fetchUrl="/api/users"
+                    columns={["name", "address", "email", "created_at"]}
+                ></DataTable>
+            </div>
         </div>
     );
 };
