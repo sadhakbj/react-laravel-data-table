@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+@import "./variable";
+@import "~bootstrap/scss/bootstrap";
+
+.tableFixHead {
+    overflow-y: auto;
+    max-height: 500px;
+}
+.tableFixHead thead th {
+    position: sticky;
+    top: 0;
+}
